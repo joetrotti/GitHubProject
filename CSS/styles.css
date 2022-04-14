@@ -1,0 +1,101 @@
+/* CSS for the Login and Register Page */
+
+body {  
+    margin: 0;  
+    padding: 0;  
+    background-color:#69b9dfba;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}  
+
+form {  
+    width: 382px;  
+    overflow: hidden;  
+    margin: auto;  
+    margin: 20 0 0 450px;  
+    padding: 80px;  
+    background: #23463f;  
+    border-radius: 15px ;  
+    box-shadow: 7px 7px 5px #277582;
+}  
+
+h1 {  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;
+}  
+
+label {  
+    color: #08ffd1;  
+    font-size: 17px;  
+}  
+
+.space {
+    letter-spacing: 1px;
+}
+
+#user {  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+
+#pswd {  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+
+#fname {
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;
+}
+
+#lname {
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;
+}
+
+#date {
+    width: 100px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;
+}
+
+#submit {  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    background-color: #08ffd286;
+    color: white;
+    font-weight: bold;
+    font-size:medium;
+}  
+
+#submit:hover {
+    text-decoration: underline;
+    color: #23463f;
+}
+
+span {  
+    color: white;  
+    font-size: 17px;  
+}  
+
+input {
+    margin-top: 5px;
+}
+  
