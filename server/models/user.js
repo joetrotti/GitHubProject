@@ -69,15 +69,6 @@ async function userExists(username) {
   return await con.query(sql);
 }
 
-async function editUser(user) {
-  const sql = `UPDATE users SET
-    username = "${user.userName}"
-    WHERE user_id = ${user.userId}
-  `;
-  const update = await con.query(sql);
-  const newUser = await getUser(user);
-  return newUser[0];
-}
 
 // ORDER BY example
 async function order(table, column) {
@@ -104,20 +95,6 @@ async function orderUsernames() {
   return await con.query(sql);
 }
 
-//min and max
-async function minHeight() {
-  const sql = `SELECT MIN(user_height) 
-    FROM users
-  `;
-  return await con.query(sql);
-}
-
-async function maxHeight() {
-  const sql = `SELECT MAX(user_height) 
-    FROM users
-  `;
-  return await con.query(sql);
-}
 
 
 

@@ -17,7 +17,7 @@ const query = (sql, binding) => {
   });
 };
 
-const createQuery = "CREATE DATABASE IF NOT EXISTS bmi_db;";
+const createQuery = "CREATE DATABASE IF NOT EXISTS social_db;";
 con.query(createQuery);
 
 module.exports = { con, query };
