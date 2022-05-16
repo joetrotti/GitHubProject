@@ -4,6 +4,20 @@ function login(e) {
   e.preventDefault()
   let userName = document.getElementById("user").value
   let pswd = document.getElementById("pswd").value
+
+  fetchData('/users/login', {username: user, password: pswd}, "POST")
+  .then((data) => {
+    if(!data.message) {
+      setCurrentUser(data);
+      window.location.href = "index.html";
+    }
+  })
+  .catch((error) => {
+    const errText = error.message;
+    document.querySelector("#login p.error").innerHTML = errText;
+    document.getElementById("pswd").value = "";
+    console.log(`Error! ${errText}`)
+  });
   console.log(userName)
 }
 
@@ -18,7 +32,7 @@ function register(e) {
   let date = document.getElementById("date").value
   let newUser = new User(12345, user, pswd)
 
-  fetchData('/users/register', {username: user, password: pswd}, "POST")
+  fetchData('/users/register', {username: user, password: pswd, firstname: fname, lastname: lname, enterdate: date}, "POST")
   .then((data) => {
     if(!data.message) {
       setCurrentUser(data);
