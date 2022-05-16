@@ -20,7 +20,7 @@
         </div>
         <div class="headerMiddle">
             <div class="headerOption active">
-                <span class="material-icons">home</span>
+                <a href="index.html"><span class="material-icons">home</span></a>
             </div>
 
             <div class="headerOption">
@@ -127,8 +127,12 @@
             <div class="post">
                 <div class="postTop">
                     <img class="userAvatar" src="images/avatar2.png" alt="profile avatar">
-                    <form>
-                        <input type="text" class="post_input" id="postText" placeholder="Got Something to say? ">
+                    <form id="postBox">
+                        <input type="text" class="post_input" id="postText" placeholder="Got Something to say? " required>
+                        <div class="postOption">
+                            <input type="submit" value="Post">
+                        </div>
+    
                     </form>
                 </div>
                 <div class="postBottom">
@@ -142,16 +146,17 @@
                         <h3>Photo</h3>
                     </div>
 
-                    <div class="postOption">
-                        <span style="color: orange;" class="material-icons">insert_emoticon</span>
+                    <!-- <div class="postOption">
+                        <button><span style="color: orange;" class="material-icons">send</span></button>
                         <h3>Feeling</h3>
-                    </div>
+                    </div> -->
+
                 </div>
             </div>
             <!-- Message Sender Ends -->
-            <ul id="posts">
-                
-            </ul>
+            
+            <ul id="posts"></ul>
+
             <!-- Post Starts -->
             <div class="postTest">
                 <div class="postTestTop">
@@ -194,5 +199,6 @@
     <!-- Main Body Ends -->
 
     <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/post.js"></script>
 </body>
 </html>

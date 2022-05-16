@@ -98,4 +98,4 @@ async function orderUsernames() {
 
 
 
-module.exports = { getUsers, login, register, deleteUser, editUser, getUser, createTable };
+module.exports = { getUsers, login, register, deleteUser, getUser, createTable };

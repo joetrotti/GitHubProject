@@ -16,6 +16,13 @@
     height: 75px;
 }
 
+.PostAvatar {
+    background-image: url(../images/avatar2.png);
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+
 header {
     padding: 15px 20px;
     display: flex;
@@ -328,3 +335,41 @@ body {
     background-color: #eff2f5;
     border-radius: 15px;
 }
+
+ul{
+    margin: 0;
+}
+
+#posts {
+    padding: 0;
+    width: 100%;
+}
+
+.feedPost {
+    display: flex;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, .75);
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.delete {
+    width: 25px;
+    height:25px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    color:red;
+    float: right;
+    margin-left:30px;
+    /* justify-content: right; */
+    /* margin-left: 800px; */
+    /* margin-left: 93%; */
+  }
+  
+  .delete:hover {
+    background-color: darkred;
+    color: white;
+  }

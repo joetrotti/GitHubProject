@@ -12,7 +12,10 @@ form {
     overflow: hidden;  
     margin: auto;  
     margin: 20 0 0 450px;  
-    padding: 80px;  
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 80px;
+    padding-top: 10px;  
     background: #23463f;  
     border-radius: 15px ;  
     box-shadow: 7px 7px 5px #277582;
@@ -20,7 +23,7 @@ form {
 
 h1 {  
     text-align: center;  
-    color: #277582;  
+    color: #08ffd1;  
     padding: 20px;
 }  
 
@@ -98,4 +101,6 @@ span {
 input {
     margin-top: 5px;
 }
+
+
   

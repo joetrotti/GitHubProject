@@ -1,5 +1,5 @@
 const express = require('express');
-const User = require('./user');
+const User = require('../models/user');
 const router = express.Router();
 
 router
@@ -16,7 +16,7 @@ router
     try {
       const user = await User.register(req.body);
       console.log(user)
-      res.send({...user, password: undefined})
+      res.send({...user, user_password: undefined})
     } catch(error) {
       res.status(401).send({message: error.message});
     }

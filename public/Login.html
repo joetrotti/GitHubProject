@@ -2,12 +2,38 @@
 <html lang="en">    
 <head>    
     <title>Login Form</title>    
-    <link rel="stylesheet" type="text/css" href="CSS/styles.css">    
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">   
+    <link rel="stylesheet" href="CSS/style.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>    
 <body>    
-    <h1>Login Page</h1>
+    <!-- Nav Bar Starts -->
+    <header>
+        <div class="headerLeft">
+            <img class="logo" src="images/logo3.png" alt="logo">
+        </div>
+        
+        <div class="headerMiddle">
+            <div class="headerOption active">
+                <a href="index.html"><span class="material-icons">home</span></a>
+            </div>
+        </div>
+
+        <div class="headerRight">        
+            <div class="profileIcons">
+                <a href="Registration.html"><span class="material-icons">add</span></a>
+            </div>
+
+            <div class="profileIcons">
+                <span class="material-icons">expand_more</span>
+            </div>
+        </div>
+    </header>
+    <!-- Nav Bar Ends -->
+
     <br>    
-    <form id="login" action="login">    
+    <form id="login" action="login">   
+        <h1>Login Page</h1> 
         <label class="space"><strong>User Name</strong>    
         </label>    
         <input type="text" name="user" id="user" placeholder="Username">    

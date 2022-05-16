@@ -1,26 +1,62 @@
-//1. Grab your form by the id and any other sections needed
-let form = document.getElementById("postText");
-//2. Add an event listener for when submitted
-form.addEventListener('submit', addNote);
+let form = document.getElementById("postBox");
+form.addEventListener('submit', addPost);
 
-//3. Create your function for addNote from above
-function addNote(e) {
-  e.preventDefault(); //need to stop normal submission of form
-  //4. Get the note using your id
-  let note = document.getElementById("note").value;
+
+function addPost(e) {
+//    e.preventDefault();
+//   const ul = document.querySelector('ul');
+//   ul.innerHTML = `
+//     <ul>
+//     <div class="post">
+//     <div class="postTop">
+//         <img class="userAvatar" src="images/avatar2.png" alt="profile avatar">
+//         <form id="postBox">
+//             <input type="text" class="post_input" id="postText" placeholder="Got Something to say? ">
+//             <div class="postOption">
+//                 <input type="submit" value="Post">
+//             </div>
+
+//         </form>
+//     </div>
+//     <div class="postBottom">
+//         <div class="postOption">
+//             <span style="color: red;" class="material-icons">play_circle</span>
+//             <h3>Video</h3>
+//         </div>
+
+//         <div class="postOption">
+//             <span style="color: green;" class="material-icons">photo_library</span>
+//             <h3>Photo</h3>
+//         </div>
+
+//         <!-- <div class="postOption">
+//             <span style="color: orange;" class="material-icons">send</span>
+//             <h3>Feeling</h3>
+//         </div> -->
+
+//     </div>
+// </div>
+//     </ul>
+//   `;
+ 
+ 
+  e.preventDefault();
+  let myPostText = document.getElementById("postText").value;
   
-  const newNote = new Note(note);
-  console.log(newNote);
-  //5. Create new li to add note text to
+  console.log(myPostText);
   let li = document.createElement('li');
-  //6. Add any styling/classes 
-  li.className = 'note';
-  //7. Add note text inside li
-  li.appendChild(document.createTextNode(note));
-  //8. Append finished li to notes list
-  notes.appendChild(li);
+  li.className = 'feedPost';
+  li.appendChild(document.createTextNode(myPostText));
+  posts.appendChild(li);
   
-  //10. adding delete button
+  // let videoBtn = document.createElement("button");
+  // videoBtn.className = "postBottom";
+  // let x = document.createTextNode("video")
+  // videoBtn.appendChild(x);
+  // li.appendChild(videoBtn);
+
+
+
   let deleteBtn = document.createElement("button");
   deleteBtn.addEventListener('click', deleteNote);
   deleteBtn.className = "button delete";
@@ -28,6 +64,11 @@ function addNote(e) {
   deleteBtn.appendChild(x);
   li.appendChild(deleteBtn);
 
-  //9. Get rid of text after submitting
-  document.getElementById("note").value = "";
+  document.getElementById("postText").value = "";
 }
+
+function deleteNote(e) {
+  let li = e.target.parentElement;
+  posts.removeChild(li);
+}
+

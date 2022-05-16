@@ -17,6 +17,21 @@ function register(e) {
   let pswd = document.getElementById("pswd").value
   let date = document.getElementById("date").value
   let newUser = new User(12345, user, pswd)
+
+  fetchData('/users/register', {username: user, password: pswd}, "POST")
+  .then((data) => {
+    if(!data.message) {
+      setCurrentUser(data);
+      window.location.href = "index.html";
+    }
+  })
+  .catch((error) => {
+    const errText = error.message;
+    document.querySelector("#register p.error").innerHTML = errText;
+    document.getElementById("pswd").value = "";
+    console.log(`Error! ${errText}`)
+  });
+
   console.log(newUser)
 }
 
@@ -88,24 +103,6 @@ class User {
     }
 }
 
-// const nav = document.querySelector('nav');
-// if(getCurrentUser()) {
-//   nav.innerHTML = `
-//     <ul>
-//       <li><a href="bmi.html">Calculate</a></li>
-//       <li><a href="profile.html">Profile</a></li>
-//       <li><a id="logout">Logout</a></li>
-//     </ul>
-//   `;
-// } else {
-//   nav.innerHTML = `
-//     <ul>
-//       <li><a href="bmi.html">Calculate</a></li>
-//       <li><a href="login.html">Login</a></li>
-//       <li><a href="register.html">Sign Up</a></li>
-//     </ul>
-//   `
-// }
 
 // Fetch method implementation:
 export async function fetchData(url = '', data = {}, methodType) {

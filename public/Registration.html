@@ -2,12 +2,40 @@
 <html lang="en">    
 <head>    
     <title>Register Form</title>    
-    <link rel="stylesheet" type="text/css" href="CSS/styles.css">    
-</head>    
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">  
+    <link rel="stylesheet" href="CSS/style.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+</head> 
+
 <body>    
-    <h1>Register</h1>
+<!-- Nav Bar Starts -->
+<header>
+    <div class="headerLeft">
+        <img class="logo" src="images/logo3.png" alt="logo">
+    </div>
+
+    <div class="headerMiddle">
+        <div class="headerOption active">
+            <a href="index.html"><span class="material-icons">home</span></a>
+        </div>
+    </div>
+
+    <div class="headerRight">
+        <div class="profileIcons">
+            <a href="Login.html"><span class="material-icons">login</span></a>
+        </div>
+
+        <div class="profileIcons">
+            <span class="material-icons">expand_more</span>
+        </div>
+    </div>
+</header>
+<!-- Nav Bar Ends -->
+
     <br>    
     <form id="register" action="register">
+        <h1>Register</h1>
+        <p class="error"></p>
         <label class="space"><strong>First Name</strong></label>  
         <input type="text" name="fname" id="fname" placeholder="First Name">
         <br><br>
