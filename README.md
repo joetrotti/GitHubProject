@@ -2,7 +2,7 @@
 ![plot](./public/images/home.png)
  A new social media platform in its early stages designed to connect with others. In the wepage's current state a *User* can register , login, and make a post. 
  Future plans for JT Social include connecting with friends, posting videos and images, leaving comments on posts, and adding a "Donation Station" designed to
- donate to weekly changing charities.
+ donate to weekly changing charities. There will be a customizable profile with a friends list.
  
  ## Installation and Access
  
@@ -25,5 +25,33 @@
  ![plot](./public/images/post.png)
  
  ## Updated ERD Model
- ![plot](./public/images/Updated ERD.png)
+ This ERD Model has the comment attribute removed. Once JT Social is more complete the ERD Model will reflect the changes.
+ ![plot](./public/images/UpdatedERD.png)
+ 
+ This ERD Model Shows:
+ - A User must a make profile.
+ - A User can make a post.
+ - Profiles contain the posts 
+
+ # Bugs/ Issues
+ The main issue faced, is when any post after the first one is made, the post is displayed under the last one instead of pushing it down. I have the SQL
+ set up for the comment but no JavaScript for it yet.
+
+ # Recources Used
+ - Front-End
+   - HTML
+   - CSS
+   - JavaScript
+ - Bakc-End
+   - JavaScript
+   - SQL
+   - Nodemon  
+ - Framework
+   - Express
+ - Database
+   - MySQL
+ - Text Editor
+   - Visual Studio Code   
+ 
+ 
        
