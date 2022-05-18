@@ -38,6 +38,4 @@ async function orderPosts() {
     return await con.query(sql);
   }
 
-
-
 module.exports = { getPosts, getPost, orderPosts};
